@@ -1,0 +1,24 @@
+@use "../defaults" as *;
+@use "../partials/variables" as *;
+
+.btn {
+	width: 13rem;
+	padding: 0rem 1rem;
+	border-radius: 30px;
+	color: $primary-color;
+	font-family: $primary-font;
+	font-size: 1.4rem;
+	line-height: 2.5;
+	font-weight: bold;
+	text-decoration: none;
+	text-align: center;
+	background-color: white;
+	cursor: pointer;
+	transition: background 250ms ease-in-out, transform 150ms ease;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	&:hover {
+		background-color: $secondary-color;
+		color: $text-color;
+	}
+}

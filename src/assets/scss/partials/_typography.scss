@@ -1,0 +1,71 @@
+@use "variables" as *;
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;1,400;1,500&display=swap");
+
+@font-face {
+  font-family: HelveticaNue;
+  src: url(../../fonts/HelveticaNeue.ttf);
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: HelveticaNue;
+  src: url(../../fonts/HelveticaNeue-Bold.ttf);
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: HelveticaNue;
+  src: url(../../fonts/HelveticaNeue-BoldItalic.ttf);
+  font-weight: bold;
+  font-style: italic;
+}
+@font-face {
+  font-family: HelveticaNue;
+  src: url(../../fonts/HelveticaNeue-Italic.ttf);
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: PressStartP2;
+  src: url(../../fonts/PressStart2P-vaV7.ttf);
+}
+
+.heading {
+  font-family: $secondary-font;
+  text-transform: uppercase;
+  font-size: 3rem;
+  color: $text-color;
+  margin-bottom: 2rem;
+  text-align: left;
+  font-weight: normal;
+}
+.subheading {
+  font-family: $primary-font;
+  font-size: 1.5;
+  color: $text-color;
+  text-align: left;
+
+  &__secondary {
+    font-family: $primary-font;
+    color: black;
+    font-size: 1.3rem;
+  }
+}
+.text {
+  font-family: $primary-font;
+  font-size: 1rem;
+  color: $text-color;
+  text-align: justify;
+}
+.caption {
+  font-family: $secondary-font;
+  font-size: 1rem;
+}
+.text--bold {
+  font-style: bold;
+}
+.text--italic {
+  font-style: italic;
+}

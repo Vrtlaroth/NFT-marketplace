@@ -1,0 +1,50 @@
+// Stara input tema bez Angular materiala
+
+input[type="text"] {
+  border: none;
+  border-bottom: 1px solid $text-color;
+  width: 100%;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  &:focus {
+    outline: none;
+    border-bottom: 1px solid $primary-color;
+    background-color: $primary-color-opacity;
+  }
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+input.valid,
+textarea.valid {
+  border-bottom: 1px solid $primary-color !important;
+  background-color: $primary-color-opacity !important;
+}
+
+input.invalid:not(form),
+textarea.invalid:not(form) {
+  border-bottom: 1px solid red;
+  background-color: rgba(255, 0, 0, 0.1);
+}
+
+textarea {
+  width: 100%;
+  min-height: 10rem;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  margin: 2rem 0rem;
+  resize: none;
+  border: none;
+  border-bottom: 1px solid $text-color;
+  &:focus {
+    outline: none;
+    border-bottom: 1px solid $primary-color;
+    background-color: $primary-color-opacity;
+  }
+}

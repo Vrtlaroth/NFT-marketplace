@@ -1,0 +1,153 @@
+@use "components/button";
+
+@use "partials/typography";
+@use "partials/images";
+@use "partials/variables" as *;
+
+@use "./defaults" as *;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #000000;
+  background-image: url("../img/bg_main.png");
+  background-repeat: repeat-y;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.container-fluid {
+  width: 100%;
+}
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.flex-half {
+  @include sm {
+    padding: 2rem;
+  }
+  @include md {
+    flex: 50%;
+  }
+}
+
+.no_padding {
+  padding: 0px;
+}
+.no_margin {
+  margin: 0px;
+}
+
+#team {
+  position: relative;
+}
+
+.stats-circle {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 100%;
+
+  @media (min-width: 600px) {
+    height: 3rem;
+    width: 3rem;
+  }
+
+  @include md {
+    height: 3rem;
+    width: 3rem;
+    margin-right: 2%;
+  }
+
+  @include lg {
+    height: 3.5rem;
+    width: 4.5rem;
+  }
+
+  &--first {
+    background-color: #5b3a89;
+  }
+  &--second {
+    background-color: #339f47;
+  }
+  &--third {
+    background-color: #a84a3f;
+  }
+  &--forth {
+    background-color: #afa7bb;
+  }
+  &--fifth {
+    background-color: #f26430;
+  }
+}
+
+.stats-circle-small {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 100%;
+
+  @media (min-width: 600px) {
+    height: 1.5rem;
+    width: 1.5rem;
+  }
+
+  @include md {
+    height: 1.5rem;
+    width: 1.5rem;
+    margin-right: 2%;
+  }
+
+  @include lg {
+    height: 1.5rem;
+    width: 1.5rem;
+  }
+
+  &--first {
+    background-color: #5b3a89;
+  }
+  &--second {
+    background-color: #339f47;
+  }
+  &--third {
+    background-color: #a84a3f;
+  }
+  &--forth {
+    background-color: #afa7bb;
+  }
+  &--fifth {
+    background-color: #f26430;
+  }
+}
+html,
+body,
+#root,
+.App {
+  height: 100%;
+}
+
+.gradient {
+  height: 200px;
+  width: 100%;
+  background: rgb(65, 37, 101);
+  background: -moz-linear-gradient(
+    0deg,
+    rgba(65, 37, 101, 1) 1%,
+    rgba(1, 0, 3, 0) 100%
+  );
+  background: -webkit-linear-gradient(
+    0deg,
+    rgba(65, 37, 101, 1) 1%,
+    rgba(1, 0, 3, 0) 100%
+  );
+  background: linear-gradient(
+    0deg,
+    rgba(65, 37, 101, 1) 1%,
+    rgba(1, 0, 3, 0) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#412565",endColorstr="#010003",GradientType=1);
+}

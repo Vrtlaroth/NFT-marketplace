@@ -1,0 +1,43 @@
+@use "../../assets/scss/partials/variables" as *;
+
+#dialog-input {
+  width: 100%;
+  margin-top: 2rem;
+  padding: 0.5rem;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid #000000;
+}
+
+.input-error {
+  outline: none;
+  border: none;
+  border-bottom: 1px solid $warn-color !important;
+  &::placeholder {
+    color: $warn-color;
+  }
+}
+
+.dialog-errors {
+  display: none;
+  color: $warn-color;
+  font-family: $primary-font;
+  font-size: 0.8rem;
+  padding-top: 1rem;
+  text-align: center;
+}
+
+.dialog {
+  &-title {
+    font-family: $primary-font !important;
+  }
+  &-subtitle {
+    font-family: $primary-font !important;
+    font-weight: lighter;
+    font-size: 1rem;
+    color: $warn-color !important;
+  }
+  &-description {
+    font-family: $primary-font !important;
+  }
+}

@@ -1,0 +1,66 @@
+@import "../../assets/scss/vendor/media-query-mixins";
+
+.player-container {
+  padding: 1rem;
+  text-align: center;
+  margin-bottom: 2rem;
+
+  @include md {
+    padding: 0px;
+
+    margin-bottom: 2rem;
+  }
+}
+
+.card-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 60rem;
+  gap: 3rem;
+
+  @include lg {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+
+.player {
+  border-radius: 5rem 5rem 0rem 0rem !important;
+  &__content {
+    padding: 0px !important;
+  }
+}
+
+.player__expand {
+  border-radius: 5rem 5rem 0rem 0rem !important;
+
+  @include lg {
+    border-radius: 5rem 5rem 0rem 0rem !important;
+  }
+}
+
+@include md {
+  .card-container {
+    display: flex;
+    flex-direction: row;
+    height: 12rem;
+  }
+
+  .player:nth-child(2) {
+    order: -1;
+  }
+
+  .player__expand {
+    display: flex;
+    align-self: center;
+    border-radius: 5rem 5rem 0rem 0rem !important;
+  }
+}
+
+@include lg {
+  .card-container {
+    height: 17rem;
+    margin-bottom: 3rem;
+  }
+}

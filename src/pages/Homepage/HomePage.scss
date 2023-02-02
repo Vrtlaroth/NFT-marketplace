@@ -1,0 +1,356 @@
+@use "../../assets/scss/defaults" as *;
+@use "../../assets/scss/partials/variables" as *;
+
+.homepage-container {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 10rem;
+
+  h2 {
+    font-size: 2rem;
+    color: $text-color;
+    margin-bottom: 2rem;
+  }
+
+  &__first-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    @include md {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+
+    @include lg {
+      width: 100%;
+    }
+
+    img {
+      width: 100%;
+
+      @include lg {
+        width: 10%;
+      }
+    }
+
+    .search-container {
+      @include lg {
+        display: flex;
+        align-items: center;
+      }
+
+      &__searchbar {
+        @include lg {
+          width: 100%;
+        }
+      }
+      &__btns {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+
+        @include lg {
+          margin-top: 0;
+
+          width: 70%;
+        }
+
+        button {
+          width: 40%;
+          padding: 5%;
+          border-radius: 10px;
+          border: 0;
+          background-color: $primary-color;
+          color: $text-color;
+          cursor: pointer;
+          margin-top: 1rem;
+          font-family: $primary-font;
+
+          @include lg {
+            height: auto;
+          }
+        }
+      }
+    }
+
+    .first-container__item {
+      margin-bottom: 30%;
+      width: 100%;
+      h1 {
+        font-size: 1.5rem;
+        color: $text-color;
+        margin-top: 1rem;
+        width: 100%;
+
+        @include md {
+          font-size: 2rem;
+        }
+
+        @include xl {
+          font-size: 3rem;
+        }
+      }
+
+      h1:nth-of-type(2) {
+        color: $primary-color;
+        margin-bottom: 2rem;
+      }
+
+      p {
+        color: $text-color;
+        margin-bottom: 2rem;
+      }
+
+      @include md {
+        margin: 0;
+      }
+
+      @include lg {
+        width: 80%;
+      }
+    }
+
+    @include md {
+      display: flex;
+
+      img {
+        width: 50%;
+      }
+    }
+  }
+
+  &__second-container {
+    margin-bottom: 30%;
+
+    h2 {
+      text-align: center;
+    }
+
+    @include md {
+      margin-top: 8%;
+      margin-bottom: 10%;
+    }
+
+    .flex-container {
+      @include md {
+        display: flex;
+      }
+    }
+
+    .flex-container__item {
+      display: flex;
+      background-color: $text-color;
+      height: 11vh;
+
+      margin: 0 auto 5%;
+
+      @include md {
+        display: flex;
+        width: 49%;
+        height: 14vh;
+      }
+
+      @include xl {
+        height: 19vh;
+      }
+
+      &--left {
+        border-radius: 100px 50px 50px 100px;
+      }
+
+      &--right {
+        border-radius: 50px 100px 100px 50px;
+      }
+
+      .flex-container__item-circle {
+        width: 16rem;
+        background-color: $primary-color;
+        border: 0;
+        border-radius: 100%;
+        height: auto;
+
+        @include md {
+          width: 25rem;
+        }
+
+        @include lg {
+          width: 18rem;
+        }
+
+        @include xl {
+          width: 17rem;
+        }
+      }
+
+      p {
+        margin: 0;
+        display: flex;
+        align-items: center;
+        font-size: 14px;
+        padding-top: 3%;
+        padding-bottom: 3%;
+
+        @include md {
+          font-size: 1rem;
+        }
+      }
+
+      .first--paragraph {
+        padding-left: 3%;
+        padding-right: 10%;
+      }
+
+      .second--paragraph {
+        padding-left: 10%;
+        padding-right: 3%;
+      }
+    }
+  }
+
+  .features-container {
+    & h2 {
+      text-align: center;
+      margin-bottom: 4rem;
+    }
+    .neque {
+      margin-top: 1rem;
+    }
+    &__items {
+      @include md {
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+    &__item {
+      background-color: $primary-color;
+      border-radius: 40px;
+      padding: 7% 8% 5% 8%;
+      margin-bottom: 10%;
+
+      @include md {
+        padding: 3%;
+        width: 25%;
+      }
+    }
+
+    .btn__black {
+      width: 40%;
+      padding: 4%;
+      border-radius: 10px;
+      border: 0;
+      background-color: black;
+      color: $text-color;
+      cursor: pointer;
+      margin-top: 1rem;
+      font-family: $primary-font;
+
+      @include lg {
+        height: auto;
+      }
+
+      @include md {
+        padding: 8%;
+        width: 60%;
+      }
+    }
+  }
+
+  .communty-container {
+    margin-top: 20%;
+    margin-bottom: 20%;
+    @include md {
+      margin-top: 0%;
+      margin-bottom: 10%;
+    }
+    & h2 {
+      text-align: center;
+      margin-bottom: 4rem;
+    }
+    &__flex-items {
+      display: flex;
+      justify-content: space-between;
+
+      @include md {
+        justify-content: space-evenly;
+      }
+      a {
+        width: 10%;
+        img:nth-of-type(1) {
+          width: 100%;
+        }
+
+        @include rSm {
+          width: 100%;
+        }
+      }
+
+      img {
+        width: 33%;
+
+        @include md {
+          width: 10%;
+        }
+      }
+    }
+  }
+
+  .team-container {
+    & h2 {
+      text-align: center;
+      margin-bottom: 4rem;
+    }
+    .team-imgs {
+      display: block;
+
+      @include md {
+        display: flex;
+        justify-content: space-between;
+      }
+      img {
+        width: 100%;
+        margin-bottom: 10%;
+
+        @include md {
+          width: 18%;
+        }
+      }
+    }
+  }
+
+  .faq-container {
+    h2 {
+      text-align: center;
+    }
+    .faq-items {
+      @include md {
+        display: flex;
+        justify-content: space-between;
+      }
+      .faq-item {
+        margin-bottom: 1rem;
+        background-color: $primary-color;
+        height: 19vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 30px;
+        color: $text-color;
+        text-align: center;
+
+        @include md {
+          width: 28%;
+        }
+      }
+
+      .faq-item:nth-of-type(3) {
+        @include md {
+          padding: 3%;
+        }
+      }
+    }
+  }
+}

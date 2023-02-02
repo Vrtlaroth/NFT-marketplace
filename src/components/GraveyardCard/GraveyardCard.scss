@@ -1,0 +1,206 @@
+@use "../../assets/scss/defaults" as *;
+@use "../../assets/scss/partials/variables" as *;
+
+.graveyard-container {
+  .card-container {
+    display: block;
+    width: 100%;
+    height: auto;
+
+    &__items {
+      width: 100%;
+      padding-top: 10%;
+
+      @media (min-width: 600px) {
+        padding-top: 3%;
+      }
+
+      @include md {
+        padding: 0;
+      }
+
+      @include lg {
+        padding: 0;
+      }
+
+      @include xl {
+        padding-top: 2%;
+      }
+    }
+
+    .grid-item {
+      padding: 0%;
+      padding-bottom: 5%;
+
+      @media (min-width: 600px) {
+        padding: 1%;
+      }
+
+      @include md {
+        padding: 1%;
+      }
+
+      @include lg {
+        padding: 1%;
+      }
+
+      @include xl {
+        padding: 1%;
+      }
+      .card {
+        background-color: $primary-color;
+        color: white;
+        border-radius: 25px;
+        opacity: 0.9;
+
+        button {
+          width: 91%;
+          margin: 0% auto 1%;
+          border-radius: 15px;
+          padding-top: 3%;
+          padding-bottom: 3%;
+          border: 0;
+        }
+
+        .button__container {
+          display: flex;
+          gap: 1rem;
+          padding-left: 10px;
+          padding-right: 10px;
+
+          &__area {
+            button {
+              padding: 6%;
+              font-family: $primary-font;
+              font-size: 1rem;
+            }
+          }
+        }
+
+        &__flex-item {
+          display: flex;
+          width: 100%;
+          margin: auto;
+          margin-bottom: 3%;
+          margin-top: 2%;
+          justify-content: space-evenly;
+          height: 4vh;
+          align-items: center;
+
+          .stats-circle-small {
+            border-radius: 100%;
+            // width: 5%;
+            // height: 2vh;
+            border: 5px solid #484848;
+
+            // @media (min-width: 600px) {
+            //   width: 9%;
+            // }
+
+            // @include md {
+            //   width: 8%;
+            //   margin-right: 1%;
+            // }
+          }
+
+          .stats-circle--first {
+            background-color: white;
+          }
+
+          .stats-circle--second {
+            background-color: #30f23d;
+          }
+
+          .stats-circle--third {
+            background-color: #59a8f8;
+          }
+
+          .stats-circle--fourth {
+            background-color: #e900d2;
+          }
+
+          .stats-circle--fifth {
+            background-color: #f26430;
+          }
+
+          div {
+            display: flex;
+            width: 99%;
+            margin-left: 1%;
+            justify-content: space-between;
+          }
+        }
+      }
+    }
+  }
+}
+
+.card__top {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  &__circles {
+    position: relative;
+    height: 5rem;
+    width: 6rem;
+    & .stats-circle {
+      position: absolute;
+      left: 0px;
+      height: 3rem;
+      width: 3rem;
+      background-color: orange;
+      &:nth-child(2) {
+        left: 40%;
+        background-color: gray;
+      }
+
+      @include md {
+        height: 4rem;
+        width: 4rem;
+      }
+    }
+  }
+  &__stats {
+    width: 10rem;
+
+    @include md {
+      width: 12rem;
+    }
+    &__name {
+      font-family: $primary-font;
+      font-size: 1.3rem;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 0.5rem;
+      & > .stats-circle-small {
+        background-color: grey;
+      }
+    }
+    &__details {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      & > span.icon--arrow-down {
+        width: 1rem;
+        height: 0.6rem;
+      }
+      &__avg {
+        background-color: #ff6633;
+        border-radius: 50px;
+        font-size: 0.8rem;
+        font-family: $primary-font;
+        padding: 0.3rem;
+      }
+      &__x {
+        background-color: #996699;
+        border-radius: 50px;
+        font-size: 0.8rem;
+        font-family: $primary-font;
+        padding: 0.3rem;
+      }
+    }
+  }
+}

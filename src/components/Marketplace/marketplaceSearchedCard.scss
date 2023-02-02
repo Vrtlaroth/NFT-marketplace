@@ -1,0 +1,235 @@
+@use "../../assets/scss/defaults" as *;
+@use "../../assets/scss/partials/variables" as *;
+@use "../../assets/scss/partials/_typography.scss";
+
+.marketplace {
+  margin-top: 10%;
+
+  @include lg {
+    margin-top: 0 !important;
+    width: 100%;
+  }
+
+  @include md {
+    margin-top: 10%;
+    width: 100%;
+  }
+}
+
+.wrapper {
+  margin-top: 10%;
+
+  @include lg {
+    margin-top: 0 !important;
+    width: 100%;
+  }
+
+  @include md {
+    margin-top: 10%;
+    width: 100%;
+  }
+
+  .search-container {
+    @include lg {
+      display: flex;
+      align-items: center;
+    }
+
+    &__searchbar {
+      @include lg {
+        width: 100%;
+      }
+    }
+    &__btns {
+      display: flex;
+      justify-content: space-evenly;
+      width: 100%;
+      margin-top: 5%;
+
+      @include lg {
+        margin-top: 0;
+
+        width: 70%;
+      }
+
+      button {
+        width: 40%;
+        padding: 4%;
+        border-radius: 20px;
+        border: 0;
+        background-color: $primary-color;
+        color: $text-color;
+        cursor: pointer;
+
+        @include lg {
+          height: auto;
+        }
+      }
+    }
+  }
+
+  .mpcard {
+    margin-top: 20%;
+
+    @include md {
+      margin-top: 5%;
+    }
+
+    @media (min-width: 768px) {
+      margin-top: 5%;
+    }
+
+    &__grid {
+      width: 100%;
+
+      &__item {
+        padding: 0 !important;
+        margin-bottom: 10%;
+
+        @include md {
+          padding: 1% !important;
+          margin-bottom: 10%;
+        }
+
+        @media (min-width: 768px) {
+          margin-bottom: 0%;
+          padding: 1%;
+        }
+
+        &__content {
+          border-radius: 55px 55px 20px 20px;
+
+          @include md {
+            border-radius: 30px 30px 20px 20px;
+          }
+
+          @include xl {
+            border-radius: 40px 40px 20px 20px;
+          }
+
+          &__contentitem {
+            padding: 0 !important;
+
+            &__title-container {
+              &__title {
+                position: relative;
+                bottom: 60px;
+                background-color: $text-color;
+                height: 10vh;
+                border-top-left-radius: 20px;
+                border-top-right-radius: 20px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                @include lg {
+                  height: 7vh;
+                  bottom: 40px;
+                }
+
+                @media (min-width: 768px) {
+                  height: 9vh;
+                  bottom: 60px;
+                }
+
+                @media (min-width: 1024px) {
+                  height: 6vh;
+                  bottom: 30px;
+                }
+              }
+
+              &__nft-number {
+                position: relative;
+                bottom: 75px;
+                & > a {
+                  color: red;
+                  text-decoration: none;
+                  &:hover {
+                    color: $primary-color;
+                  }
+                }
+
+                @include lg {
+                  bottom: 25px;
+                }
+              }
+            }
+          }
+
+          &__wrapper {
+            display: flex;
+            flex-direction: row;
+            margin-top: -15%;
+            justify-content: space-between;
+            border-top: 1px solid #8a8a8a;
+
+            @include lg {
+              margin: 0;
+            }
+
+            &__paragraph {
+              width: 25%;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              padding-left: 10%;
+              font-size: 0.7rem;
+              font-weight: 700;
+              @include lg {
+                width: 45% !important;
+              }
+            }
+
+            &__bottom {
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              width: 50%;
+
+              @include lg {
+                height: auto;
+                width: 50%;
+              }
+
+              &__button {
+                display: flex;
+                align-items: center;
+                width: 100%;
+                justify-content: center;
+                color: $text-color;
+                background-color: $primary-color;
+                border-bottom-left-radius: 20px;
+                padding-bottom: 3%;
+                padding-top: 3%;
+
+                @include xl {
+                  padding-left: 1rem !important;
+                }
+
+                @include md {
+                  padding-left: 6%;
+                }
+
+                p {
+                  padding-left: 3%;
+                  @include lg {
+                    width: 100%;
+                    padding: 0;
+                  }
+
+                  @include xl {
+                    width: 50%;
+                  }
+
+                  @media (min-width: 768px) {
+                    width: 100%;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

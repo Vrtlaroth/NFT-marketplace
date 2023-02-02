@@ -1,0 +1,224 @@
+@use "../../assets/scss/defaults" as *;
+@use "../../assets/scss/partials/variables" as *;
+
+.nav {
+  position: fixed;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-color: #000000;
+  color: white;
+  z-index: 999;
+
+  &__hamburger {
+    width: 2rem;
+    height: 2rem;
+    margin: 0rem 1rem;
+    @include lg {
+      display: none;
+    }
+  }
+
+  &__logo {
+    width: 45%;
+    @include md {
+      width: 45%;
+    }
+    @include lg {
+      width: 27%;
+      margin-left: 1rem;
+    }
+    @include xl {
+      width: 24%;
+    }
+
+    .img--logo {
+      width: 100%;
+
+      @include lg {
+        width: 80%;
+      }
+    }
+  }
+
+  &__connect-btn {
+    button {
+      width: 100%;
+      padding: 0.5rem;
+      border-radius: 10px;
+      border: 0;
+      background-color: $primary-color;
+      color: $text-color;
+      cursor: pointer;
+      font-family: $primary-font;
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+    }
+    @include md {
+      margin-right: 1rem;
+    }
+    @include lg {
+      margin-left: 1%;
+    }
+  }
+
+  &__user {
+    @include lg {
+      padding-right: 1rem;
+      margin-left: 1rem;
+    }
+  }
+
+  &__dropdown {
+    display: none;
+
+    align-items: self-start;
+  }
+
+  &__links {
+    position: absolute;
+    top: 3rem;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: auto;
+    padding: 2rem 0rem;
+    background-color: #000000;
+    &--open {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__button {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      width: 14rem;
+      text-decoration: none;
+      margin: 0 auto;
+      width: 60%;
+      align-items: center;
+      justify-content: center;
+      // padding:3%;
+
+      color: $text-color;
+      cursor: pointer;
+      font-family: $primary-font;
+
+      @include lg {
+        width: auto;
+        margin: 0;
+      }
+
+      &--dropdown {
+        border-radius: 1rem;
+        border: 1px solid #c3bfc2;
+        background-color: #c3bfc2;
+        margin-bottom: 1rem;
+        width: 80%;
+
+        padding-bottom: 0.5rem;
+        padding-top: 0.5rem;
+
+        &:first-of-type {
+          padding-left: 0;
+          & > p {
+            color: $primary-color;
+            text-align: center;
+            text-transform: none;
+            padding-left: 0;
+            margin: 0 auto;
+          }
+        }
+        &:first-of-type > div.nav__links__icon {
+          display: none !important;
+        }
+      }
+    }
+
+    &__icon {
+      width: 2rem;
+
+      @include lg {
+        width: 1.5rem;
+      }
+    }
+
+    &__text {
+      padding-left: 2rem;
+      font-family: $primary-font;
+      text-transform: uppercase;
+      color: white;
+
+      @include lg {
+        padding-left: 0.5rem;
+      }
+    }
+    @include md {
+      top: 3.5rem;
+    }
+    @include lg {
+      position: static;
+      top: 0rem;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-end;
+      background-color: #000000;
+      width: 60%;
+      font-size: 0.7rem;
+      height: auto;
+      padding: 0px;
+      padding-left: 2rem;
+    }
+    @include xl {
+      justify-content: flex-end;
+      margin-left: auto;
+      font-size: 0.8rem;
+    }
+  }
+  &__dropdown {
+    position: absolute;
+    top: 3rem;
+    right: 0px;
+    display: none;
+    flex-direction: column;
+    align-items: self-start;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    height: 13rem;
+    padding: 2rem 0rem;
+    background-color: #7c6c77;
+    border-radius: 2rem;
+    margin-top: 1rem;
+    margin-right: 1rem;
+    align-items: self-start;
+
+    @include md {
+      width: 20rem;
+    }
+    @include lg {
+      top: 3.5rem;
+      height: 11rem;
+      padding: 1rem 1rem;
+      width: 20rem;
+      justify-content: space-around;
+      align-items: center;
+    }
+
+    @include xl {
+      justify-content: space-around;
+      align-items: center;
+    }
+  }
+
+  // @include lg {
+  // 	justify-content: unset;
+  // }
+}

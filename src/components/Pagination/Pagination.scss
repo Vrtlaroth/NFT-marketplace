@@ -1,0 +1,43 @@
+@use "../../assets/scss/partials/variables" as *;
+@use "../../assets/scss/defaults" as *;
+
+.pagination {
+  margin-top: 6rem;
+  margin-bottom: 3rem;
+  margin-right: 0px !important;
+  font-size: 1rem !important;
+  display: flex;
+  flex-direction: column;
+  height: 13rem;
+  justify-content: space-between;
+  align-items: center;
+  color: $text-color !important;
+
+  @include lg {
+    padding: 0 5rem;
+    flex-direction: row;
+  }
+
+  @include xl {
+    font-size: 1.5rem !important;
+    padding: 0 5rem;
+    flex-direction: row;
+  }
+  &-action {
+    font-size: 1.5rem !important;
+    color: $text-color !important;
+    &:hover {
+      color: $primary-color !important;
+      cursor: pointer;
+    }
+    @include lg {
+      font-size: 1rem !important;
+    }
+    @include xl {
+      font-size: 1.5rem !important;
+    }
+  }
+  &-page {
+    color: $text-color !important;
+  }
+}

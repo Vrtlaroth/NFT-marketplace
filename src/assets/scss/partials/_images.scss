@@ -1,0 +1,82 @@
+@use "mixins" as *;
+
+.img {
+	&--logo {
+		@include image("LOGO.png");
+	}
+	&--bg-bottom {
+		@include image("bg_bottom.png");
+	}
+	&--first {
+		@include image("first_place.png");
+	}
+
+	&--second {
+		@include image("second_place.png");
+	}
+
+	&--third {
+		@include image("third_place.png");
+	}
+
+	&--coffin {
+		@include image("coffin.png");
+	}
+
+	&--key {
+		@include image("icon/key.png");
+	}
+
+	&--ghost {
+		@include image("ghost.png");
+	}
+}
+
+.icon {
+	&--graveyard {
+		@include image("icon/graveyard.png");
+	}
+	&--coffin {
+		@include image("icon/coffin.png");
+	}
+
+	&--combat {
+		@include image("icon/combat.png");
+	}
+	&--leaderboards {
+		@include image("icon/leaderboards.png");
+	}
+	&--marketplace {
+		@include image("icon/marketplace.png");
+	}
+	&--soul-extraction {
+		@include image("icon/soul_extraction.png");
+	}
+	&--my-ghosts {
+		@include image("icon/my-ghosts.png");
+	}
+	&--hamburger {
+		@include image("icon/hamburger.png");
+	}
+	&--discord {
+		@include image("icon/discord.png");
+	}
+	&--fantom {
+		@include image("icon/fantom.png");
+	}
+	&--arrow-down {
+		@include image("icon/arrow-down.png");
+	}
+	&--settings {
+		@include image("icon/settings.png");
+	}
+	&--signout {
+		@include image("icon/signout.png");
+	}
+	&--ghost-icon {
+		@include image("icon/ghost-icon.png");
+	}
+	&--twitter {
+		@include image("icon/twitter.png");
+	}
+}

@@ -1,0 +1,36 @@
+@import "../../assets/scss/partials/variables";
+
+.table {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 4rem;
+  &__filter {
+    margin-bottom: 2rem;
+  }
+}
+
+.table__container {
+  background-color: $primary-color !important;
+  color: $text-color !important;
+  border-radius: 1.3rem !important;
+  padding: 2rem;
+  opacity: 0.9;
+}
+
+.table__text {
+  color: $text-color !important;
+}
+
+.TableRow,
+.table__head {
+  background-color: $secondary-color;
+  border-radius: 2rem;
+}
+
+thead > tr > th:first-of-type {
+  border-radius: 50px 0px 0px 50px;
+}
+thead > tr > th:last-of-type {
+  border-radius: 0px 50px 50px 0px;
+}

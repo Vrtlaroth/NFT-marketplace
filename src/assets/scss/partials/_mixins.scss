@@ -1,0 +1,7 @@
+@use "variables" as *;
+
+@mixin image($filename) {
+  width: 100%;
+  height: auto;
+  content: url(#{$images-path}#{$filename});
+}

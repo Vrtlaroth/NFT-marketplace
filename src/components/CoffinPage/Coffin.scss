@@ -1,0 +1,134 @@
+@import "../../assets/scss/partials/variables";
+@import "../../assets/scss/vendor/media-query-mixins";
+
+.coffin {
+	padding-top: 10rem;
+}
+.coffin__container {
+	width: 80%;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	margin: 0 auto;
+	background-color: rgba(115, 73, 172, 0.5);
+	border-radius: 1rem;
+	margin-bottom: 3rem;
+
+	& > span.img--coffin {
+		margin-bottom: 3.5rem;
+		padding: 6%;
+	}
+
+	@include md {
+		padding: 10rem 10rem 4rem 10rem;
+	}
+}
+
+.key__container {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	padding-right: 1rem;
+	margin: 0 auto;
+	width: 50%;
+	background-color: white;
+	border-radius: 15px;
+	font-family: $primary-font;
+
+	&__item {
+		display: flex;
+		align-items: center;
+		margin-left: 1rem;
+	}
+
+	&__text {
+		display: flex;
+		align-items: center;
+	}
+
+	&__number {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+}
+
+.btn__approve {
+	width: 30%;
+	margin: 0 auto;
+	border-radius: 9px;
+	padding: 0.5rem;
+	background-color: $primary-color;
+	color: white;
+	border: 1px solid #484848;
+	margin-top: 1rem;
+}
+
+.statistics-items {
+	display: flex;
+	flex-direction: column;
+	align-content: center;
+	justify-content: space-between;
+	color: white;
+	font-family: $primary-font;
+	width: 33%;
+	margin: 4rem auto 3rem;
+	@include lg {
+		flex-direction: row;
+	}
+}
+.statistics-item {
+	display: flex;
+	align-items: center;
+	width: 8rem;
+	padding-bottom: 35%;
+	&__box {
+		display: flex;
+		flex-direction: column;
+		margin-left: 0.5rem;
+		@include lg {
+		}
+	}
+
+	@include lg {
+		justify-content: space-between;
+	}
+}
+.stats-circle-small {
+	width: 1rem;
+	height: 1rem;
+	border-radius: 100%;
+
+	@media (min-width: 600px) {
+		height: 1.5rem;
+		width: 1.5rem;
+	}
+
+	@include md {
+		height: 1.5rem;
+		width: 1.5rem;
+		margin-right: 2%;
+	}
+
+	@include lg {
+		height: 1.5rem;
+		width: 1.5rem;
+	}
+
+	&--first {
+		background-color: #5b3a89;
+	}
+	&--second {
+		background-color: #339f47;
+	}
+	&--third {
+		background-color: #a84a3f;
+	}
+	&--forth {
+		background-color: #afa7bb;
+	}
+	&--fifth {
+		background-color: #f26430;
+	}
+}
